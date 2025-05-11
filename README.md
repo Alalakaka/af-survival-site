@@ -7,7 +7,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: url('https://photos.google.com/photo/AF1QipPqnWn25Fh7O4rSX2xkUJXmQLmVTES2k41DWp3W') no-repeat center center fixed;
+      background: url('minecraft-wallpaper.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #f0f0f0;
     }
@@ -141,7 +141,7 @@
 
   <div class="navbar">
     <div class="logo">
-      <img src="A_logo_for_&quot;AF_Survival&quot;_related_to_Minecraft_is_d.png" alt="Logo AF SURVIVAL">
+      <img src="https://www.minecraft.net/content/dam/minecraft/website/redesign/brand-assets/minecraft-block-dirt-hero.jpg" alt="Bloco de Terra 3D do Minecraft">
       AF SURVIVAL
     </div>
     <div class="menu-toggle" onclick="toggleMenu()">
