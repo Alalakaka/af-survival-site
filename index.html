@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>AF SURVIVAL</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #1e1e1e;
+      background: url('minecraft-wallpaper.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #f0f0f0;
     }
 
@@ -17,22 +17,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #2c2c2c;
+      background-color: rgba(44, 44, 44, 0.9);
       padding: 10px 20px;
     }
 
     .navbar .logo {
       font-size: 24px;
       color: #00ff88;
+      display: flex;
+      align-items: center;
     }
 
-    .navbar .menu-toggle {
+    .navbar .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .menu-toggle {
       display: none;
       flex-direction: column;
       cursor: pointer;
     }
 
-    .navbar .menu-toggle span {
+    .menu-toggle span {
       height: 3px;
       width: 25px;
       background: white;
@@ -59,6 +66,7 @@
     .content {
       text-align: center;
       padding: 50px 20px;
+      background-color: rgba(30, 30, 30, 0.8);
     }
 
     .discord-button {
@@ -94,6 +102,14 @@
       margin: 10px 0;
     }
 
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
     /* Responsivo */
     @media (max-width: 768px) {
       .nav-links {
@@ -111,7 +127,7 @@
         border-top: 1px solid #444;
       }
 
-      .navbar .menu-toggle {
+      .menu-toggle {
         display: flex;
       }
 
@@ -123,19 +139,20 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">AF SURVIVAL</div>
+  <div class="navbar">
+    <div class="logo">
+      <img src="A_logo_for_&quot;AF_Survival&quot;_related_to_Minecraft_is_d.png" alt="Logo AF SURVIVAL">
+      AF SURVIVAL
+    </div>
     <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#" onclick="showHome()">Página Inicial</a>
       <a href="https://discord.gg/UVypYPfETW" target="_blank">Discord</a>
       <a href="#" onclick="showLoja()">Loja</a>
     </div>
-  </nav>
+  </div>
 
   <div class="content" id="homeContent">
     <h1>AF SURVIVAL</h1>
@@ -150,15 +167,21 @@
 
   <div class="content loja" id="lojaContent">
     <h2>Loja VIP</h2>
+
     <div class="vip-item">
       <h3>VIP 7 Dias</h3>
       <p>R$ 4,90</p>
     </div>
+
     <div class="vip-item">
       <h3>VIP 1 Mês</h3>
       <p>R$ 29,99</p>
     </div>
   </div>
+
+  <footer>
+    &copy; MDS AF SURVIVAL - Todos os direitos reservados
+  </footer>
 
   <script>
     function toggleMenu() {
