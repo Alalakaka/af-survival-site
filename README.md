@@ -7,7 +7,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: url('minecraft-wallpaper.jpg') no-repeat center center fixed;
+      background: url('https://photos.google.com/photo/AF1QipPqnWn25Fh7O4rSX2xkUJXmQLmVTES2k41DWp3W') no-repeat center center fixed;
       background-size: cover;
       color: #f0f0f0;
     }
