@@ -1,2 +1,181 @@
-# af-survival-site
-Site
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AF SURVIVAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    /* Menu de navegação */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c2c2c;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      color: #00ff88;
+    }
+
+    .navbar .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .navbar .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00ff88;
+    }
+
+    /* Conteúdo principal */
+    .content {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .discord-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #5865F2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .loja {
+      display: none;
+      margin-top: 40px;
+    }
+
+    .loja h2 {
+      margin-bottom: 20px;
+    }
+
+    .vip-item {
+      background-color: #2c2c2c;
+      margin: 10px auto;
+      padding: 20px;
+      width: 250px;
+      border-radius: 8px;
+    }
+
+    .vip-item p {
+      margin: 10px 0;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2c2c2c;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+
+      .nav-links a {
+        padding: 15px;
+        border-top: 1px solid #444;
+      }
+
+      .navbar .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">AF SURVIVAL</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#" onclick="showHome()">Página Inicial</a>
+      <a href="https://discord.gg/UVypYPfETW" target="_blank">Discord</a>
+      <a href="#" onclick="showLoja()">Loja</a>
+    </div>
+  </nav>
+
+  <div class="content" id="homeContent">
+    <h1>AF SURVIVAL</h1>
+    <p><strong>IP:</strong> mc.afsurvival.com</p>
+    <p><strong>Porta:</strong> 25565</p>
+
+    <h2>Sobre o servidor</h2>
+    <p>AF SURVIVAL é um servidor brasileiro de Minecraft recém-criado. Nosso foco é oferecer uma experiência survival divertida, amigável e com boa jogabilidade para todos os jogadores. Participe da nossa comunidade e ajude a construir um mundo incrível!</p>
+
+    <a class="discord-button" href="https://discord.gg/UVypYPfETW" target="_blank">Entrar no Discord</a>
+  </div>
+
+  <div class="content loja" id="lojaContent">
+    <h2>Loja VIP</h2>
+    <div class="vip-item">
+      <h3>VIP 7 Dias</h3>
+      <p>R$ 4,90</p>
+    </div>
+    <div class="vip-item">
+      <h3>VIP 1 Mês</h3>
+      <p>R$ 29,99</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('show');
+    }
+
+    function showLoja() {
+      document.getElementById('homeContent').style.display = 'none';
+      document.getElementById('lojaContent').style.display = 'block';
+    }
+
+    function showHome() {
+      document.getElementById('homeContent').style.display = 'block';
+      document.getElementById('lojaContent').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
